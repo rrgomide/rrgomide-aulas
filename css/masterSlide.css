@@ -1,0 +1,45 @@
+#classes li {
+  display: inline-block;
+}
+
+#header-left {
+  position: absolute;
+  top: 0%;
+  left: 0%;			
+  margin: 10px;	
+  font-size: 30px;
+}
+#header-right {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  margin: 10px;
+  font-size: 15px;
+}
+#footer-left {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  margin: 10px;
+  z-index: 200;
+}
+
+.reveal section img { 
+  background:none; 
+  border:none; 
+  box-shadow:none; 
+}
+
+.imgLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.imgRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+

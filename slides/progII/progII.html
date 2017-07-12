@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta 
+		  name="viewport" 
+			content="width=device-width, 
+			         initial-scale=1.0, 
+							 maximum-scale=1.0,
+							 user-scalable=no"
+	  >
+		<title>Programação II</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/black.css">
+		<link rel="stylesheet" href="../../lib/css/zenburn.css">
+		<link rel='stylesheet' href='../../css/masterSlide.css'>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	</head>
+	<body>
+		<div class="reveal default center">
+			<div class="slides">
+				<section id='classes'>
+					<h4>Programação II</h4>
+					<!-- ul's will be created dinamically
+					<ul class='left'>
+            <li><a href='./aula01.html'>Aula 01</a></li>
+            <li>Aula 01</li>
+            <li>Aula 02</li>
+            <li>Aula 03</li>
+            <li>Aula 04</li>
+            <li>Aula 05</li>
+            <li>Aula 06</li>
+            <li>Aula 07</li>
+					</ul>
+					-->
+				</section>
+			</div>
+		</div>
+
+		<script src="../../lib/js/head.min.js"></script>
+		<script src="../../js/reveal.js"></script>
+    <script src='./constants.js'></script>
+		<script src='../../js/masterSlide.js'></script>;
+		<script src="../../js/jquery-3.2.1.min.js"></script>
+		<script src="../../js/fileUtils.js"></script>
+		<script src="../../js/aulaUtils.js"></script>
+		<script src="./js/progII.js"></script>
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../../plugin/markdown/marked.js' },
+					{ src: '../../plugin/markdown/markdown.js' },
+					{ src: '../../plugin/notes/notes.js', async: true },
+					{ src: '../../plugin/highlight/highlight.js', async: true, 
+					  callback: function() { 
+							hljs.initHighlightingOnLoad(); 
+							hljs.configure({tabReplace: '  '});
+						} }
+				]
+			});
+
+			//Dealing with headers and footers
+			createHeadersAndFooters(
+				"<img src='../../img/logo-estacio.png'>", 
+				document.title, 
+				getStandardFooter('../..')
+			);
+
+			//Filling links of currently available classes
+			fillClasses('../progII/')
+
+			//Rendering slide number			
+			//Reveal.configure({ slideNumber: 'c/t' });
+		</script>
+	</body>
+</html>
